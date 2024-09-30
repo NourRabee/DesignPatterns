@@ -18,16 +18,16 @@ public class Main{
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    meal.setAppetizer(DishFactory.createAppetizer("ChickenSalad"));
+                    meal.setAppetizer(new ChickenSaladFactory().CreateDish());
                     break;
                 case 2:
-                    meal.setAppetizer(DishFactory.createAppetizer("ButterCracker"));
+                    meal.setAppetizer(new ButterCrackerFactory().CreateDish());
                     break;
                 case 3:
-                    meal.setAppetizer(DishFactory.createAppetizer("CheeseTwist"));
+                    meal.setAppetizer(new CheeseTwistFactory().CreateDish());
                     break;
                 case 4:
-                    meal.setAppetizer(DishFactory.createAppetizer("PotatoBite"));
+                    meal.setAppetizer(new PotatoBiteFactory().CreateDish());
                     break;
                 default:
                     break;
@@ -45,16 +45,16 @@ public class Main{
             choice = scanner.nextInt();
             switch (choice) {
                 case 5:
-                    meal.setMainCourse(DishFactory.createMainCourse("Lasagna"));
+                    meal.setMainCourse(new LasagnaFactory().CreateDish());
                     break;
                 case 6:
-                    meal.setMainCourse(DishFactory.createMainCourse("Steak"));
+                    meal.setMainCourse(new SteakFactory().CreateDish());
                     break;
                 case 7:
-                    meal.setMainCourse(DishFactory.createMainCourse("Molokhiya"));
+                    meal.setMainCourse(new MolokhiyaFactory().CreateDish());
                     break;
                 case 8:
-                    meal.setMainCourse(DishFactory.createMainCourse("GrilledChicken"));
+                    meal.setMainCourse(new GrilledChickenFactory().CreateDish());
                     break;
                 default:
                     break;
@@ -72,16 +72,16 @@ public class Main{
             choice = scanner.nextInt();
             switch (choice) {
                 case 9:
-                    meal.setDessert(DishFactory.createDessert("FruitSalad"));
+                    meal.setDessert(new FruitSaladFactory().CreateDish());
                     break;
                 case 10:
-                    meal.setDessert(DishFactory.createDessert("Tiramisu"));
+                    meal.setDessert(new TiramisuFactory().CreateDish());
                     break;
                 case 11:
-                    meal.setDessert(DishFactory.createDessert("Browny"));
+                    meal.setDessert(new BrownyFactory().CreateDish());
                     break;
                 case 12:
-                    meal.setDessert(DishFactory.createDessert("IceCream"));
+                    meal.setDessert(new IceCreamFactory().CreateDish());
                     break;
                 default:
                     break;

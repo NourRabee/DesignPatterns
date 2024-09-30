@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Steak extends Dish implements IMainCourse{
+public class Steak extends Dish implements IMainCourse {
 
     public Steak(String size, String calories, Float price, List<String> ingredients) {
         super(size, calories, price, ingredients);

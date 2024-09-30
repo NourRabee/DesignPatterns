@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class ChickenSalad extends Dish implements IAppetizer{
+public class ChickenSalad extends Dish implements IAppetizer {
 
     public ChickenSalad(String size, String calories, Float price, List<String> ingredients){
         super(size, calories, price, ingredients);
