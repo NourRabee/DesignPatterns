@@ -32,6 +32,8 @@ public class Main{
                 default:
                     break;
             }
+        }else {
+            scanner.next();
         }
 
         System.out.println("\nMain Course");
@@ -59,6 +61,8 @@ public class Main{
                 default:
                     break;
             }
+        }else {
+            scanner.next();
         }
 
         System.out.println("\nDesserts");
@@ -86,6 +90,33 @@ public class Main{
                 default:
                     break;
             }
+        }else {
+            scanner.next();
+        }
+
+        System.out.println("\nCombos");
+        System.out.println(" [13] Special Combo");
+        System.out.println(" [14] Diet Meal");
+
+        IMealFactory mealFactory = null;
+
+        if (scanner.hasNextInt()) {
+            choice = scanner.nextInt();
+            switch (choice) {
+                case 13:
+                    mealFactory = new SpecialCombo();
+                    break;
+                case 14:
+                    mealFactory = new DietMeal();
+                    break;
+                default:
+                    break;
+            }
+
+            meal.setAppetizer(mealFactory != null ? mealFactory.prepareAppetizer() : null);
+            meal.setMainCourse(mealFactory != null ? mealFactory.prepareMainCourse() : null);
+            meal.setDessert(mealFactory != null ? mealFactory.prepareDessert() : null);
+
         }
 
         System.out.println("\nYour Meal:");
