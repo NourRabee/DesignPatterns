@@ -5,4 +5,4 @@
 
 2- Factory  Method: Object creation is deferred to subclasses, which implement the factory method to create objects based on their logic.
 
-3- Abstract Factory: The "Factory of Factories" allows clients to work with related objects while abstracting away the details of their creations.
+3- Abstract Factory: The "Factory of Factories"  pattern provides a way to create families of related objects without specifying their concrete classes.
