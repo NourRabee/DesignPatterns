@@ -9,25 +9,14 @@ public class MemoryLogger {
     private int errorCount;
 
     private List<LogMessage> logs = new ArrayList<>();
-    private static MemoryLogger instance = null;
-    private static final Object lock = new Object();
+    private static  final MemoryLogger instance = new MemoryLogger(); //eager loading -> at application startup
 
     private MemoryLogger() {
 
     }
 
     public static MemoryLogger getLogger() {
-        // In Java, the synchronized keyword is used to ensure that only one thread can access a particular block of code at a time.
 
-        if (instance == null) {
-
-            synchronized (lock) {
-
-                if (instance == null) {
-                    instance = new MemoryLogger();
-                }
-            }
-        }
         return instance;
 
     }
