@@ -24,7 +24,7 @@ public class MemoryLogger {
             if (instance == null) {
                 instance = new MemoryLogger();
             }
-            return instance;
+        return instance;
 
         }
     }
