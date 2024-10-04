@@ -9,6 +9,18 @@ public class MemoryLogger {
     private int errorCount;
 
     private List<LogMessage> logs = new ArrayList<>();
+    private static MemoryLogger instance = null;
+
+    private MemoryLogger(){
+
+    }
+
+    public static MemoryLogger getLogger() {
+        if(instance == null){
+            instance = new MemoryLogger();
+        }
+        return instance;
+    }
 
     public List<LogMessage> getLogs() {
         return Collections.unmodifiableList(logs);

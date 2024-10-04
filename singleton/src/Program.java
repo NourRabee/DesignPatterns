@@ -11,7 +11,7 @@ public class Program {
     }
 
     static void assignVoucher(String email, String voucher){
-        logger = new MemoryLogger();
+        logger = MemoryLogger.getLogger();
 
         logger.logInfo(String.format("Voucher '%s' assigned", voucher));
 
@@ -20,7 +20,7 @@ public class Program {
     }
 
     static void useVoucher(String voucher){
-        logger = new MemoryLogger();
+        logger = MemoryLogger.getLogger();
 
         logger.logWarning("3 attempts made to validate the voucher");
 
