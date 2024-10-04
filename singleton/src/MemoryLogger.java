@@ -9,15 +9,19 @@ public class MemoryLogger {
     private int errorCount;
 
     private List<LogMessage> logs = new ArrayList<>();
-    private static  final MemoryLogger instance = new MemoryLogger(); //eager loading -> at application startup
 
     private MemoryLogger() {
 
     }
 
+    private static class LazyHolder {
+        // Lazy initialization->The instance is created only when accessed for the first time
+        private static final MemoryLogger instance = new MemoryLogger();
+    }
+
     public static MemoryLogger getLogger() {
 
-        return instance;
+        return LazyHolder.instance;
 
     }
 
